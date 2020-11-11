@@ -32,9 +32,24 @@ const NewAppointmentForm = (props) => {
   const handleTimeChange = event => {
     setTime(event.target.value);
   }
+
+  const handleNewAppointmentSubmit = event => {
+    event.preventDefault();
+    const submittedTitle = title.trim();
+    const submittedDate = date;
+    const submittedTime = time;
+
+    if (!submittedTitle || !submittedDate || !submittedTime) return;
+
+    props.onNewAppointmentSubmit({
+      title: submittedTitle,
+      date: submittedDate,
+      time: submittedTime
+    })
+  }
   
   return ( 
-    <form id="new-appointment-form">
+    <form id="new-appointment-form" onSubmit={handleNewAppointmentSubmit}>
       <label htmlFor="new-appointment-title">Title</label>
       <input type="text"
              name="new-appointment-title" 

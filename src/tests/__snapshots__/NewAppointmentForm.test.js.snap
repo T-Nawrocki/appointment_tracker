@@ -3,6 +3,7 @@
 exports[`New Appointment Form should render the form 1`] = `
 <form
   id="new-appointment-form"
+  onSubmit={[Function]}
 >
   <label
     htmlFor="new-appointment-title"

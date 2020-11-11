@@ -6,6 +6,7 @@ exports[`App should render the app 1`] = `
 >
   <form
     id="new-appointment-form"
+    onSubmit={[Function]}
   >
     <label
       htmlFor="new-appointment-title"
