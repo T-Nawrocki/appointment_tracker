@@ -15,6 +15,7 @@ exports[`App should render the app 1`] = `
     <input
       id="new-appointment-title"
       name="new-appointment-title"
+      onChange={[Function]}
       type="text"
       value=""
     />
@@ -26,8 +27,9 @@ exports[`App should render the app 1`] = `
     <input
       id="new-appointment-date"
       name="new-appointment-date"
+      onChange={[Function]}
       type="date"
-      value={2020-11-11T13:43:21.214Z}
+      value=""
     />
     <label
       htmlFor="new-appointment-time"
@@ -37,6 +39,7 @@ exports[`App should render the app 1`] = `
     <select
       id="new-appointment-time"
       name="new-appointment-time"
+      onChange={[Function]}
       value=""
     >
       <option
