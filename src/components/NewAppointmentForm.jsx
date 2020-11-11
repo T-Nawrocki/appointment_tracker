@@ -46,6 +46,10 @@ const NewAppointmentForm = (props) => {
       date: submittedDate,
       time: submittedTime
     })
+
+    setTitle("");
+    setDate("");
+    setTime("");
   }
   
   return ( 
