@@ -37,4 +37,10 @@ describe('New Appointment Form', () => {
     expect(availableTimes()[0]).toBe("8:00");
     expect(availableTimes()[availableTimes().length - 1]).toBe("17:30");
   });
+
+  it('should have options for all available times (plus default)', () => {
+    const wrapper = shallow(<NewAppointmentForm />);
+    expect(wrapper.find('option').length).toBe(21);
+  });
+
 });
