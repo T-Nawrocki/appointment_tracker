@@ -2,7 +2,7 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 
-import NewAppointmentForm from '../components/NewAppointmentForm';
+import NewAppointmentForm, { availableTimes } from '../components/NewAppointmentForm';
 
 configure({ adapter: new Adapter() });
 
@@ -30,5 +30,11 @@ describe('New Appointment Form', () => {
   it('should render the submit input', () => {
     const wrapper = shallow(<NewAppointmentForm />);
     expect(wrapper.find('input[name="new-appointment-submit"]').exists()).toBe(true);
+  });
+
+  it('should generate available times every half hour between 8am and 6pm', () => {
+    expect(availableTimes().length).toBe(20);
+    expect(availableTimes()[0]).toBe("8:00");
+    expect(availableTimes()[availableTimes().length - 1]).toBe("17:30");
   });
 });
