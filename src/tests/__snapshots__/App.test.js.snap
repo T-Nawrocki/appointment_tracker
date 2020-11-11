@@ -3,5 +3,44 @@
 exports[`App should render the app 1`] = `
 <div
   className="App"
-/>
+>
+  <form
+    id="new-appointment-form"
+  >
+    <label
+      htmlFor="new-appointment-title"
+    >
+      Title
+    </label>
+    <input
+      id="new-appointment-title"
+      name="new-appointment-title"
+      type="text"
+    />
+    <label
+      htmlFor="new-appointment-date"
+    >
+      Date
+    </label>
+    <input
+      id="new-appointment-date"
+      name="new-appointment-date"
+      type="date"
+    />
+    <label
+      htmlFor="new-appointment-time"
+    >
+      Time
+    </label>
+    <select
+      id="new-appointment-time"
+      name="new-appointment-time"
+    />
+    <input
+      name="new-appointment-submit"
+      type="submit"
+      value="Book appointment"
+    />
+  </form>
+</div>
 `;

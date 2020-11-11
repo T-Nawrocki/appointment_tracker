@@ -1,6 +1,7 @@
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
+
 import NewAppointmentForm from '../components/NewAppointmentForm';
 
 configure({ adapter: new Adapter() });
