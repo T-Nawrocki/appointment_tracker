@@ -2,7 +2,6 @@ import React from 'react';
 import AppointmentsListItem from './AppointmentsListItem';
 
 const AppointmentsList = (props) => {
-  // TODO: Sort this
   const appointmentsSorted = props.appointments.sort((a, b) => {
     if (a.dateTime > b.dateTime) return 1;
     if (a.dateTime < b.dateTime) return -1;

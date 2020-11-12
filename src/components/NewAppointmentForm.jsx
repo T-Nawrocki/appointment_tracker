@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { parseDateTime } from '../helpers/parseDateTime';
+import { parseDateTime } from '../helpers/dateTime';
 
 
 export const availableTimes = () => {
