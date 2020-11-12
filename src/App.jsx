@@ -13,8 +13,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1 id="app-heading">Appointments Tracker</h1>
       <NewAppointmentForm onNewAppointmentSubmit={onNewAppointmentSubmit} />
-      <AppointmentsList />
+      <AppointmentsList appointments={appointments} />
     </div>
   );
 }

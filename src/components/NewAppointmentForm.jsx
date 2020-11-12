@@ -86,7 +86,7 @@ const NewAppointmentForm = (props) => {
              type="submit" 
              value="Book appointment" />
     </form>
-   );
+  );
 }
 
  
