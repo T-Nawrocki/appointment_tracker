@@ -69,6 +69,7 @@ const NewAppointmentForm = (props) => {
         <input type="date" 
               name="new-appointment-date" 
               id="new-appointment-date"
+              min={new Date().toISOString().split("T")[0]}
               value={date}
               onChange = {handleDateChange} />
 
