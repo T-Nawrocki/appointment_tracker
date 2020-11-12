@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { parseDateTime } from '../helpers/parseDateTime';
 
 
 export const availableTimes = () => {
@@ -44,8 +45,7 @@ const NewAppointmentForm = (props) => {
 
     props.onNewAppointmentSubmit({
       title: submittedTitle,
-      date: submittedDate,
-      time: submittedTime
+      dateTime: parseDateTime(submittedDate, submittedTime)
     });
 
     setTitle("");
