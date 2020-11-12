@@ -43,10 +43,11 @@ const NewAppointmentForm = (props) => {
       return;      
     }
 
+    const submittedDateTime = parseDateTime(submittedDate, submittedTime);
     // TODO: add an id of some sort
     props.onNewAppointmentSubmit({
       title: submittedTitle,
-      dateTime: parseDateTime(submittedDate, submittedTime)
+      dateTime: submittedDateTime
     });
 
     cleanup();
