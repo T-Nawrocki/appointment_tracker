@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Appointments List Item should render the list item 1`] = `
+<li
+  className="appointments-list-item"
+>
+  <h2>
+    title
+  </h2>
+  <p>
+    Thursday, 12 November 2020 at 15:58
+  </p>
+</li>
+`;

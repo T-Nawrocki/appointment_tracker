@@ -7,18 +7,26 @@ import App from '../App';
 configure({ adapter: new Adapter() });
 
 describe('App', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
   it('should render the app', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('should render the new appointment form', () => {
-    const wrapper = shallow(<App />);
     expect(wrapper.find('NewAppointmentForm').length).toEqual(1);
   });
 
   it('should render the appointment list', () => {
-    const wrapper = shallow(<App />);
     expect(wrapper.find('AppointmentsList').length).toEqual(1);
+  });
+
+  it('should be able to add an appointment', () => {
+    
   });
 });
