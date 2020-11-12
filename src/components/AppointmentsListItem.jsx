@@ -9,7 +9,11 @@ const AppointmentsListItem = (props) => {
     <li className="appointments-list-item">
       <h2>{title}</h2>
       <p>
-        {dateTime.getHours()}:{dateTime.getMinutes()}, {dateTime.toLocaleDateString()}
+        {dateTime.toLocaleString([], {
+          dateStyle: "full",
+          timeStyle: "short",
+          hour12: false
+        })}
       </p>
     </li>
   );
