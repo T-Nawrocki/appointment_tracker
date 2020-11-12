@@ -5,6 +5,10 @@ const AppointmentsListItem = (props) => {
   const title = props.appointment.title;
   const dateTime = props.appointment.dateTime;
 
+  const deleteAppointment = () => {
+    props.onDeleteAppointment(props.appointment);
+  };
+
   return ( 
     <li className="appointments-list-item">
       <h2>{title}</h2>
@@ -15,6 +19,9 @@ const AppointmentsListItem = (props) => {
           hour12: false
         })}
       </p>
+      <button className="delete-button" onClick={deleteAppointment}>
+        Delete
+      </button>
     </li>
   );
 }

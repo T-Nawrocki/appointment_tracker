@@ -12,7 +12,11 @@ const AppointmentsList = (props) => {
     <ul id="appointments-list">
       {appointmentsSorted.map((appointment, index) => {
         return (
-          <AppointmentsListItem appointment={appointment} key={index} />
+          <AppointmentsListItem 
+            appointment={appointment} 
+            key={index} 
+            onDeleteAppointment={props.onDeleteAppointment} 
+          />
         );
       })}
     </ul>

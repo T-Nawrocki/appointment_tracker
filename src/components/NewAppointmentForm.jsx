@@ -29,6 +29,7 @@ const NewAppointmentForm = (props) => {
     // TODO: Add some feedback to user for failed submission
     if (!submittedTitle || !submittedDate || !submittedTime) return;
 
+    // TODO: add an id of some sort
     props.onNewAppointmentSubmit({
       title: submittedTitle,
       dateTime: parseDateTime(submittedDate, submittedTime)

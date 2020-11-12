@@ -11,11 +11,18 @@ function App() {
     setAppointments([...appointments, newAppointment]);
   };
 
+  // TODO: refector to use ID once those are implemented
+  const onDeleteAppointment = deletedAppointment => {
+    setAppointments(appointments.filter(appointment => {
+      return JSON.stringify(appointment) !== JSON.stringify(deletedAppointment);
+    }));
+  };
+
   return (
     <div className="App">
       <h1 id="app-heading">Appointments Tracker</h1>
       <NewAppointmentForm onNewAppointmentSubmit={onNewAppointmentSubmit} />
-      <AppointmentsList appointments={appointments} />
+      <AppointmentsList appointments={appointments} onDeleteAppointment={onDeleteAppointment} />
     </div>
   );
 }

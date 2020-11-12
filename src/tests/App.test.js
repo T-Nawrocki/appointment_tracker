@@ -26,7 +26,4 @@ describe('App', () => {
     expect(wrapper.find('AppointmentsList').length).toEqual(1);
   });
 
-  it('should be able to add an appointment', () => {
-    
-  });
 });
