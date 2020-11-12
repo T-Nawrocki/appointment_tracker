@@ -9,6 +9,9 @@ exports[`App should render the app 1`] = `
   >
     Appointments Tracker
   </h1>
+  <ul
+    id="input-warnings"
+  />
   <form
     id="new-appointment-form"
     onSubmit={[Function]}
