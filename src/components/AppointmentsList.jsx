@@ -13,7 +13,7 @@ const AppointmentsList = (props) => {
     <ul id="appointments-list">
       {appointmentsSorted.map((appointment, index) => {
         return (
-          <AppointmentsListItem appointment={appointment} index={index} />
+          <AppointmentsListItem appointment={appointment} key={index} />
         );
       })}
     </ul>

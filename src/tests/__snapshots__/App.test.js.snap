@@ -4,6 +4,11 @@ exports[`App should render the app 1`] = `
 <div
   className="App"
 >
+  <h1
+    id="app-heading"
+  >
+    Appointments Tracker
+  </h1>
   <form
     id="new-appointment-form"
     onSubmit={[Function]}
@@ -156,7 +161,7 @@ exports[`App should render the app 1`] = `
       value="Book appointment"
     />
   </form>
-  <div
+  <ul
     id="appointments-list"
   />
 </div>
