@@ -39,13 +39,14 @@ const NewAppointmentForm = (props) => {
     const submittedDate = date;
     const submittedTime = time;
 
+    // TODO: Add some feedback to user for failed submission
     if (!submittedTitle || !submittedDate || !submittedTime) return;
 
     props.onNewAppointmentSubmit({
       title: submittedTitle,
       date: submittedDate,
       time: submittedTime
-    })
+    });
 
     setTitle("");
     setDate("");

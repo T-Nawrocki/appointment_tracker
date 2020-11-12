@@ -16,4 +16,9 @@ describe('App', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('NewAppointmentForm').length).toEqual(1);
   });
+
+  it('should render the appointment list', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('AppointmentsList').length).toEqual(1);
+  });
 });
