@@ -44,8 +44,8 @@ const NewAppointmentForm = (props) => {
     }
 
     const submittedDateTime = parseDateTime(submittedDate, submittedTime);
-    // TODO: add an id of some sort
     props.onNewAppointmentSubmit({
+      id: event.timeStamp,
       title: submittedTitle,
       dateTime: submittedDateTime
     });
@@ -56,7 +56,7 @@ const NewAppointmentForm = (props) => {
   return ( 
     <>
       <ul id="input-warnings">
-        {inputWarnings.map(warning => <li>{warning}</li>)}
+        {inputWarnings.map((warning, index) => <li key={index}>{warning}</li>)}
       </ul>
       <form id="new-appointment-form" onSubmit={handleNewAppointmentSubmit}>
         <label htmlFor="new-appointment-title">Title</label>

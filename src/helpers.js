@@ -3,6 +3,7 @@ export const parseDateTime = (dateString, timeString) => {
   const dateAsArray = dateString.split('-');
   const timeAsArray = timeString.split(':');
   const combined = dateAsArray.concat(timeAsArray).map(n => parseInt(n));
+  combined[1] -= 1;  // month indexed from 0 but displayed from 1
   return new Date(...combined);
 }
 

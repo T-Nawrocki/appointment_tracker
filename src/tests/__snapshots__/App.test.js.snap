@@ -35,6 +35,7 @@ exports[`App should render the app 1`] = `
     </label>
     <input
       id="new-appointment-date"
+      min="2020-11-13"
       name="new-appointment-date"
       onChange={[Function]}
       type="date"

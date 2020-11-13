@@ -11,11 +11,11 @@ function App() {
     setAppointments([...appointments, newAppointment]);
   };
 
-  // TODO: refector to use ID once those are implemented
-  const onDeleteAppointment = deletedAppointment => {
-    setAppointments(appointments.filter(appointment => {
-      return JSON.stringify(appointment) !== JSON.stringify(deletedAppointment);
-    }));
+  const onDeleteAppointment = deletedAppointmentId => {
+    const appointmentIndex = appointments.map(appointment => appointment.id).indexOf(deletedAppointmentId);
+    const newAppointments = [...appointments];
+    newAppointments.splice(appointmentIndex, 1);
+    setAppointments(newAppointments);
   };
 
   return (

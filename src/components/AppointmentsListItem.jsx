@@ -6,7 +6,7 @@ const AppointmentsListItem = (props) => {
   const dateTime = props.appointment.dateTime;
 
   const deleteAppointment = () => {
-    props.onDeleteAppointment(props.appointment);
+    props.onDeleteAppointment(props.appointment.id);
   };
 
   return ( 
