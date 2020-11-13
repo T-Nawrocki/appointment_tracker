@@ -106,6 +106,5 @@ const NewAppointmentForm = (props) => {
     </div>
   );
 }
-
  
 export default NewAppointmentForm;
