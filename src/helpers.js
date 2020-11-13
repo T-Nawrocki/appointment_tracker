@@ -5,7 +5,7 @@ export const parseDateTime = (dateString, timeString) => {
   const combined = dateAsArray.concat(timeAsArray).map(n => parseInt(n));
   combined[1] -= 1;  // month indexed from 0 but displayed from 1
   return new Date(...combined);
-}
+};
 
 // generates array of times (as strings) every half hour from start to end
 export const availableTimes = () => {
@@ -19,9 +19,16 @@ export const availableTimes = () => {
   }
   
   return result;
-} 
+} ;
 
 // adds days to a date 
 export const addDays = (startDate, days) => {
   return new Date(startDate.setDate(startDate.getDate() + days));
-}
+};
+
+// 00:00 on the Monday following a date
+export const findEndOfWeek = date => {
+  const daysLeftInWeek = 7 - date.getDay() + 1;  // + 1 because includes date
+  const startOfDate = new Date(date.getFullYear(), date.getMonth(), date.getDate())
+  return addDays(startOfDate, daysLeftInWeek);
+};

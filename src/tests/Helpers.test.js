@@ -1,4 +1,4 @@
-import { parseDateTime, availableTimes, addDays } from "../helpers";
+import { parseDateTime, availableTimes, addDays, findEndOfWeek } from "../helpers";
 
 describe('date and time helpers', () => {
   it('should be able to turn date string and time string into Date object', () => {
@@ -19,5 +19,10 @@ describe('date and time helpers', () => {
   it('should be able to add days to a date (across month boundary)', () => {
     const startDate = new Date(2020, 0, 30);
     expect(addDays(startDate, 4)).toEqual(new Date(2020, 1, 3));
+  });
+
+  it('should be able to find week boundary from date', () => {
+    const startDate = new Date(2020, 10, 13, 12, 30);
+    expect(findEndOfWeek(startDate)).toEqual(new Date(2020, 10, 16))
   });
 });
