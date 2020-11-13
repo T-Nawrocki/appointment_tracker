@@ -61,38 +61,47 @@ const NewAppointmentForm = (props) => {
           {inputWarnings.map((warning, index) => <li key={index}>{warning}</li>)}
         </ul>
       }
+
       <form id="new-appointment-form" onSubmit={handleNewAppointmentSubmit}>
-        <label htmlFor="new-appointment-title">Title</label>
-        <input type="text"
-              name="new-appointment-title" 
-              id="new-appointment-title"
-              value={title}
-              onChange={handleTitleChange} />
+        <div id="title-container">
+          <label htmlFor="new-appointment-title">Title</label>
+          <input type="text"
+                 name="new-appointment-title" 
+                 id="new-appointment-title"
+                 value={title}
+                 onChange={handleTitleChange} />
+        </div>
 
-        <label htmlFor="new-appointment-date">Date</label>
-        <input type="date" 
-              name="new-appointment-date" 
-              id="new-appointment-date"
-              min={new Date().toISOString().split("T")[0]}
-              value={date}
-              onChange = {handleDateChange} />
+        <div id="date-time-container">
+          <div id="date-container">
+            <label htmlFor="new-appointment-date">Date</label>
+            <input type="date" 
+                   name="new-appointment-date" 
+                   id="new-appointment-date"
+                   min={new Date().toISOString().split("T")[0]}
+                   value={date}
+                   onChange = {handleDateChange} />
+          </div>      
 
-        <label htmlFor="new-appointment-time">Time</label>
-        <select name="new-appointment-time" 
-                id="new-appointment-time" 
-                value={time}
-                onChange={handleTimeChange}>
+          <div id="time-container">
+            <label htmlFor="new-appointment-time">Time</label>
+            <select name="new-appointment-time" 
+                    id="new-appointment-time" 
+                    value={time}
+                    onChange={handleTimeChange}>
+              <option disabled value="">--:--</option>
+              {availableTimes().map((availableTime, index) => {
+                return <option key={index} value={availableTime}>{availableTime}</option>
+              })}
+            </select>
+          </div>
 
-          <option disabled value="">--:--</option>
-          {availableTimes().map((availableTime, index) => {
-            return <option key={index} value={availableTime}>{availableTime}</option>
-          })}
+          <input name="new-appointment-submit" 
+                 id="new-appointment-submit"
+                 type="submit" 
+                 value="Book appointment" />
+        </div>   
 
-        </select>       
-
-        <input name="new-appointment-submit" 
-              type="submit" 
-              value="Book appointment" />
       </form>
     </>
   );

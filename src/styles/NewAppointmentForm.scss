@@ -1,7 +1,8 @@
 @use 'common/colours';
+@use 'common/fonts';
 
 #input-warnings {
-  margin: 2% 25% 2% 25%;
+  margin: 2% 10% 2% 10%;
   border: 3px colours.$red solid;
   border-radius: 25px;
 
@@ -10,4 +11,38 @@
     color: colours.$red;
     font-weight: bold;
   }
+}
+
+#new-appointment-form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    align-self: flex-start;
+    font-weight: bold;
+  }
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#date-time-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0 2% 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#new-appointment-date {
+  font-family: fonts.$main;
+}
+
+#new-appointment-submit {
+  font-weight: bold;
 }

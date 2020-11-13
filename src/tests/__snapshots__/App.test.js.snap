@@ -9,9 +9,6 @@ exports[`App should render the app 1`] = `
   >
     Appointments Tracker
   </h1>
-  <ul
-    id="input-warnings"
-  />
   <form
     id="new-appointment-form"
     onSubmit={[Function]}
@@ -174,17 +171,6 @@ exports[`App should render the app 1`] = `
     <div
       id="appointments-upcoming"
     >
-      <h3>
-        Upcoming Appointments
-      </h3>
-      <ul />
-    </div>
-    <div
-      id="appointments-past"
-    >
-      <h3>
-        Past Appointments
-      </h3>
       <ul />
     </div>
   </div>
