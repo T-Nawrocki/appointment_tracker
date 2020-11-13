@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/AppointmentsListItem.scss';
 
 const AppointmentsListItem = (props) => {
 
@@ -11,17 +12,19 @@ const AppointmentsListItem = (props) => {
 
   return ( 
     <li className="appointments-list-item">
-      <h4>{title}</h4>
-      <p>
-        {dateTime.toLocaleString([], {
-          dateStyle: "full",
-          timeStyle: "short",
-          hour12: false
-        })}
-      </p>
+      <div className="content">
+        <h4>{title}</h4>
+        <span>
+          {dateTime.toLocaleString([], {
+            dateStyle: "full",
+            timeStyle: "short",
+            hour12: false
+          })}
+        </span>
+      </div>
       <button className="delete-button" onClick={deleteAppointment}>
-        Delete
-      </button>
+          Delete
+        </button>
     </li>
   );
 }

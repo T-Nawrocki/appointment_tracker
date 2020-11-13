@@ -1,6 +1,10 @@
 @use 'common/colours';
 @use 'common/fonts';
 
+#new-appointment-form-container {
+  margin: 0 25% 0 25%;
+}
+
 #input-warnings {
   margin: 2% 10% 2% 10%;
   border: 3px colours.$red solid;
@@ -41,8 +45,14 @@
 
 #new-appointment-date {
   font-family: fonts.$main;
+  cursor: pointer;
+}
+
+#new-appointment-time {
+  cursor: pointer;
 }
 
 #new-appointment-submit {
   font-weight: bold;
+  cursor: pointer;
 }

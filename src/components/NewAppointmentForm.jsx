@@ -55,7 +55,7 @@ const NewAppointmentForm = (props) => {
   }
   
   return ( 
-    <>
+    <div id="new-appointment-form-container">
       { inputWarnings.length !== 0 &&
         <ul id="input-warnings">
           {inputWarnings.map((warning, index) => <li key={index}>{warning}</li>)}
@@ -103,7 +103,7 @@ const NewAppointmentForm = (props) => {
         </div>   
 
       </form>
-    </>
+    </div>
   );
 }
 
