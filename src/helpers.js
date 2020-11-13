@@ -20,3 +20,8 @@ export const availableTimes = () => {
   
   return result;
 } 
+
+// adds days to a date 
+export const addDays = (startDate, days) => {
+  return new Date(startDate.setDate(startDate.getDate() + days));
+}

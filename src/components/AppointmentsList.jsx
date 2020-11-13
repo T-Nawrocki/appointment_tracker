@@ -8,6 +8,20 @@ const AppointmentsList = (props) => {
     return 0;
   });
 
+  // const thisWeek = appointmentsSorted.filter(appointment => {
+  //   const today = new Date();
+  //   const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  //   const daysLeftInWeek = 7 - today.getDay();
+  //   const timeLeftInWeek = daysLeftInWeek * 24 * 60 * 60 * 1000;
+  //   const endOfWeek = startOfToday + timeLeftInWeek;
+  //   console.log('today :>> ', today);
+  //   console.log('startOfToday :>> ', startOfToday);
+  //   console.log('daysLeftInWeek :>> ', daysLeftInWeek);
+  //   console.log('timeLeftInWeek :>> ', timeLeftInWeek);
+  //   console.log('endOfWeek :>> ', endOfWeek);
+  //   return appointment.dateTime < endOfWeek;
+  // });
+
   return ( 
     <ul id="appointments-list">
       {appointmentsSorted.map((appointment, index) => {

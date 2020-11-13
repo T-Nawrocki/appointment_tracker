@@ -8,7 +8,7 @@ exports[`Appointments List Item should render the list item 1`] = `
     title
   </h2>
   <p>
-    Friday, 13 November 2020 at 12:14
+    Friday, 13 November 2020 at 14:17
   </p>
   <button
     className="delete-button"
