@@ -1,5 +1,6 @@
 import React from 'react';
 import AppointmentsListItem from './AppointmentsListItem';
+import '../styles/AppointmentsList.scss';
 
 const AppointmentsList = (props) => {
 

@@ -4,12 +4,16 @@ exports[`Appointments List Item should render the list item 1`] = `
 <li
   className="appointments-list-item"
 >
-  <h4>
-    title
-  </h4>
-  <p>
-    Friday, 13 November 2020 at 18:52
-  </p>
+  <div
+    className="content"
+  >
+    <h4>
+      title
+    </h4>
+    <span>
+      Friday, 13 November 2020 at 19:05
+    </span>
+  </div>
   <button
     className="delete-button"
     onClick={[Function]}

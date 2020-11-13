@@ -1,0 +1,14 @@
+@use 'common/colours';
+
+#appointments-list {
+  margin: 2% 15% 0 15%;
+  // border-top: colours.$dark 4px solid;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 10% 5% 10%;
+    padding-top: 10px;
+    border-bottom: 4px solid colours.$dark;
+  }
+}
