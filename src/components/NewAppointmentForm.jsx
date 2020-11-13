@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { parseDateTime, availableTimes } from '../helpers';
+import '../styles/NewAppointmentForm.scss';
 
 
 const NewAppointmentForm = (props) => {
@@ -55,9 +56,11 @@ const NewAppointmentForm = (props) => {
   
   return ( 
     <>
-      <ul id="input-warnings">
-        {inputWarnings.map((warning, index) => <li key={index}>{warning}</li>)}
-      </ul>
+      { inputWarnings.length !== 0 &&
+        <ul id="input-warnings">
+          {inputWarnings.map((warning, index) => <li key={index}>{warning}</li>)}
+        </ul>
+      }
       <form id="new-appointment-form" onSubmit={handleNewAppointmentSubmit}>
         <label htmlFor="new-appointment-title">Title</label>
         <input type="text"

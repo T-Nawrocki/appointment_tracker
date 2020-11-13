@@ -1,0 +1,13 @@
+@use 'common/colours';
+
+#input-warnings {
+  margin: 2% 25% 2% 25%;
+  border: 3px colours.$red solid;
+  border-radius: 25px;
+
+  li {
+    margin: 2% 0 2% 0;
+    color: colours.$red;
+    font-weight: bold;
+  }
+}

@@ -1,7 +1,10 @@
 @use 'common/fonts';
+@use 'common/colours';
 
 body {
   margin: 0;
+  background: colours.$light;
+  color: colours.$dark;
   font-family: fonts.$main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

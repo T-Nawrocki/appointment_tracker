@@ -33,17 +33,18 @@ const AppointmentsList = (props) => {
     <div id="appointments-list">
       <h2>Appointments</h2>
       <div id="appointments-upcoming">
-        <h3>Upcoming Appointments</h3>
         <ul>
           { displayAppointments(futureAppointments) }
         </ul>
       </div>
-      <div id="appointments-past">
-        <h3>Past Appointments</h3>
-        <ul>
-          { displayAppointments(pastAppointments) }
-        </ul>
-      </div>
+      { pastAppointments.length !== 0 &&
+        <div id="appointments-past">
+          <h3>Past Appointments</h3>
+          <ul>
+            { displayAppointments(pastAppointments) }
+          </ul>
+        </div>
+      }
     </div>
   );
 };
