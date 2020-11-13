@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AppointmentsList from './components/AppointmentsList';
 import NewAppointmentForm from './components/NewAppointmentForm';
-import './styles/App.css';
+import './styles/App.scss';
 
 function App() {
 

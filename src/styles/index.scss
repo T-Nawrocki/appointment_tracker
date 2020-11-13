@@ -1,0 +1,8 @@
+@use 'common/fonts';
+
+body {
+  margin: 0;
+  font-family: fonts.$main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
