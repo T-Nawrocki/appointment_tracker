@@ -35,6 +35,7 @@ const NewAppointmentForm = (props) => {
     const submittedDate = date;
     const submittedTime = time;
 
+    // validate submitted data
     if (!submittedTitle || !submittedDate || !submittedTime) {
       const newInputWarnings = []
       if (!submittedTitle) newInputWarnings.push("Please provide a title for the appointment.");
@@ -44,7 +45,7 @@ const NewAppointmentForm = (props) => {
       return;      
     }
 
-    const submittedDateTime = parseDateTime(submittedDate, submittedTime);
+    const submittedDateTime = parseDateTime(submittedDate, submittedTime);  // creates Date object from data 
     props.onNewAppointmentSubmit({
       id: event.timeStamp,
       title: submittedTitle,

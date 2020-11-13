@@ -14,17 +14,17 @@ const AppointmentsListItem = (props) => {
     <li className="appointments-list-item">
       <div className="content">
         <h4>{title}</h4>
-        <span>
+        <div>
           {dateTime.toLocaleString([], {
             dateStyle: "full",
             timeStyle: "short",
             hour12: false
           })}
-        </span>
+        </div>
       </div>
       <button className="delete-button" onClick={deleteAppointment}>
-          Delete
-        </button>
+        Delete
+      </button>
     </li>
   );
 }

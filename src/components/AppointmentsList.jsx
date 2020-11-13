@@ -5,15 +5,14 @@ import '../styles/AppointmentsList.scss';
 const AppointmentsList = (props) => {
 
   const displayAppointments = appointments => {
-    return appointments.map((appointment, index) => {
-      return (
+    return appointments.map((appointment, index) => (
         <AppointmentsListItem
           appointment={appointment}
           key={index}
           onDeleteAppointment={props.onDeleteAppointment}
         />
-      );
-    });
+      )
+    );
   };
 
   const appointmentsSorted = props.appointments.sort((a, b) => {
@@ -22,13 +21,8 @@ const AppointmentsList = (props) => {
     return 0;
   });
 
-  const pastAppointments = appointmentsSorted.filter(appointment => {
-    return appointment.dateTime < new Date();
-  });
-
-  const futureAppointments = appointmentsSorted.filter(appointment => {
-    return appointment.dateTime >= new Date();
-  });
+  const pastAppointments = appointmentsSorted.filter(appointment => appointment.dateTime < new Date());
+  const futureAppointments = appointmentsSorted.filter(appointment =>  appointment.dateTime >= new Date());
 
   return (
     <div id="appointments-list">

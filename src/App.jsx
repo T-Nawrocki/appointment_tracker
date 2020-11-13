@@ -3,7 +3,7 @@ import AppointmentsList from './components/AppointmentsList';
 import NewAppointmentForm from './components/NewAppointmentForm';
 import './styles/App.scss';
 
-function App() {
+const App = () => {
 
   const [appointments, setAppointments] = useState([]);
 
