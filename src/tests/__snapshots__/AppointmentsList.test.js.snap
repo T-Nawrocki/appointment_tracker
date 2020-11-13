@@ -1,7 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Appointments List should render the list 1`] = `
-<ul
+<div
   id="appointments-list"
-/>
+>
+  <h2>
+    Appointments
+  </h2>
+  <div
+    id="appointments-upcoming"
+  >
+    <h3>
+      Upcoming Appointments
+    </h3>
+    <ul />
+  </div>
+  <div
+    id="appointments-past"
+  >
+    <h3>
+      Past Appointments
+    </h3>
+    <ul />
+  </div>
+</div>
 `;

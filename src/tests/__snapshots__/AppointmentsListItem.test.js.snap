@@ -4,11 +4,11 @@ exports[`Appointments List Item should render the list item 1`] = `
 <li
   className="appointments-list-item"
 >
-  <h2>
+  <h4>
     title
-  </h2>
+  </h4>
   <p>
-    Friday, 13 November 2020 at 14:34
+    Friday, 13 November 2020 at 15:28
   </p>
   <button
     className="delete-button"

@@ -165,8 +165,28 @@ exports[`App should render the app 1`] = `
       value="Book appointment"
     />
   </form>
-  <ul
+  <div
     id="appointments-list"
-  />
+  >
+    <h2>
+      Appointments
+    </h2>
+    <div
+      id="appointments-upcoming"
+    >
+      <h3>
+        Upcoming Appointments
+      </h3>
+      <ul />
+    </div>
+    <div
+      id="appointments-past"
+    >
+      <h3>
+        Past Appointments
+      </h3>
+      <ul />
+    </div>
+  </div>
 </div>
 `;
