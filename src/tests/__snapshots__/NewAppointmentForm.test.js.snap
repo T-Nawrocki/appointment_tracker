@@ -37,7 +37,7 @@ exports[`New Appointment Form should render the form 1`] = `
         </label>
         <input
           id="new-appointment-date"
-          min="2020-11-13"
+          min="2020-11-14"
           name="new-appointment-date"
           onChange={[Function]}
           type="date"

@@ -21,6 +21,11 @@ export const availableTimes = () => {
   return result;
 };
 
+
+// addDays and findEndOfWeek are to be used for displaying appointment by date
+// eg separating out appointments for Today, This Week, This Month, and so on.
+// feature not yet implemented
+
 // adds days to a date 
 export const addDays = (startDate, days) => {
   return new Date(startDate.setDate(startDate.getDate() + days));
