@@ -9,8 +9,9 @@ configure({ adapter: new Adapter() });
 describe('Appointments List Item', () => {
   it('should render the list item', () => {
     const tree = renderer.create(<AppointmentsListItem appointment={{
+      id: 1,
       title: "title",
-      dateTime: new Date()
+      dateTime: new Date(2020, 0, 1)
     }} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
