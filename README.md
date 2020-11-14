@@ -1,6 +1,6 @@
 # Appointment Tracker
 
-This is a small front-end appointment tracking application built in React. Users can create appointments with a title, date and time, and appointments are then shown in chronological order (soonest appointment first), and can be deleted. Past appointments are displayed in a separate list below the upcoming appointments.
+This is a small front-end appointment tracking application built in React. Users can create appointments with a title, date and time. Appointments are then shown in chronological order (soonest appointment first), and can be deleted. Past appointments are displayed in a separate list below the upcoming appointments.
 
 As this app is front-end only, there is no data persistence and appointments will be wiped on refresh.
 
@@ -9,7 +9,6 @@ As this app is front-end only, there is no data persistence and appointments wil
 * React
 * SCSS
 * Jest/Enzyme 
-
 
 ---
 
